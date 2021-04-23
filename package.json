@@ -1,0 +1,16 @@
+{
+  "name": "FutureProDude",
+  "version": "1.0.0",
+  "description": "This code is © Kudos Beluga, 2021, and it is made available under the MIT license enclosed with the software.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.6.4",
+    "pug": "^3.0.2"
+  }
+}

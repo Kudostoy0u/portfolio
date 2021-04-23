@@ -1,0 +1,12 @@
+.form-control {
+  border-top:0 !important;
+  height:10vh !important;
+  font-size:30px !important;
+}
+.form-control:focus {
+  border-color:#ced4DA !important;
+  box-shadow: none !important;
+}
+body {
+  overflow:hidden;
+}

@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    <|create.css|>
+    link(rel="icon" type="image/x-icon" href="favicon.ico")
+    title Kudos Beluga
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://uicdn.toast.com/editor/latest/toastui-editor.min.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css')
+    link(href='//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css' rel='stylesheet')
+    script(src='//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js')
+  body
+    button.btn.btn-success.position-fixed(style="top:0;right:0") Submit post
+    input.form-control#title(placeholder='Post title...')
+    input.form-control#pwd(type='password' placeholder='Enter PWD...')
+    input.form-control#picture(placeholder='Enter image...')
+    div#editor
+    script(src='https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js')
+    <|create.js|>

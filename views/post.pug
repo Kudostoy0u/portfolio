@@ -1,0 +1,18 @@
+//Oh hi, didn't expect you here. Visit https://github.com/Kudostoy0u/portfolio if you want to see the source code
+doctype html
+html
+  include transition.pug
+  head
+    include lib.pug
+    body(class="bg-dark")
+      nav.navbar.navbar-expand-lg.navbar-dark.bg-transparent
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item.active.magic-hover.magic-hover__square
+              a.nav-link(href='#') Blog
+                span.sr-only (current)
+            li.nav-item.magic-hover.magic-hover__square
+              a.nav-link.fade_out(data-url="/") Home 
+    <|mouse.js|>
