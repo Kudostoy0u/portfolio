@@ -4,23 +4,19 @@ html
   include transition.pug
   head
     include lib.pug
+    <|index.css|>
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css")
     body(class="bg-dark")
-      nav.navbar.navbar-expand-lg.navbar-dark.bg-transparent
-        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.mr-auto
-            li.nav-item.active.magic-hover.magic-hover__square
-              a.nav-link(href='#') Home 
-                span.sr-only (current)
-            li.nav-item.magic-hover.magic-hover__square
-              a.nav-link.fade_out(data-url="/blog") Blog
+      nav
+        div.active.magic-hover.magic-hover__square
+          a.nav-link.text-gray(href='#') Home 
+        div.magic-hover.magic-hover__square
+          a.nav-link.fade_out(data-url="/blog") Blog
     h1.text-white.display-1.text-center.large Kudos Beluga
     br 
     .content
       .content__container
-        ul.content__container__list.text-center
+        ul.content__container__list.text-center.display-flex
           li.content__container__list__item Rustacean
           li.content__container__list__item Freelancer
           li.content__container__list__item Web Dev

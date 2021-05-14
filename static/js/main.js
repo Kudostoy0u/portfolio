@@ -1,33 +1,32 @@
-var globalID;
+var globalID
 (() => {
-let e = document.getElementById("transition");
-let t = 100;
+let e = document.getElementById("transition")
+let t = 100
 document.onreadystatechange = () => {
     if ("complete" == document.readyState) {
         const close = () => {
             if (t <= 0) {
               cancelAnimationFrame(globalID)
             }
-            t-=2;
+            t-=2
             e.style.width = t + "%"
-            globalID = requestAnimationFrame(close);
+            globalID = requestAnimationFrame(close)
         }
-        globalID = requestAnimationFrame(close);
+        globalID = requestAnimationFrame(close)
     }
 }
-})();
+})()
 window.onload = () => {
-let path = location.pathname;
-options = {
+let path = location.pathname
+magicMouse({
     cursorOuter: "circle-basic",
     hoverEffect: "circle-move",
     hoverItemMove: !1,
     defaultCursor: !1,
     outerWidth: 30,
     outerHeight: 30
-}
-magicMouse(options)
-if (path == "/") {
+})
+if (path == "/") 
   VANTA.NET({
       el: "html",
       mouseControls: !0,
@@ -38,7 +37,7 @@ if (path == "/") {
       scale: 1,
       scaleMobile: 1
   })
-} else if (path == "/blog") {
+else if (path == "/blog")
   VANTA.HALO({
       el: "html",
       mouseControls: true,
@@ -48,22 +47,21 @@ if (path == "/") {
       minWidth: 200.00,
       xOffset: 0.24
   })
-}
-    var globalID;
+    var globalID
     document.querySelectorAll(".fade_out")
     .forEach(w => {w.addEventListener("click", () => {
-        let e = document.getElementById("transition");
-        let t = 0;
-        e.style.display = "block";
+        let e = document.getElementById("transition")
+        let t = 0
+        e.style.display = "block"
           const close = () => {
               if (t >= 100) {
                 location.href=w.dataset.url
               } else {
-              t+=2;
+              t+=2
               e.style.width = t + "%"
-              globalID = requestAnimationFrame(close);
+              globalID = requestAnimationFrame(close)
               }
           }
-          globalID = requestAnimationFrame(close);
+          globalID = requestAnimationFrame(close)
       })})
 }

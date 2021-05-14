@@ -4,15 +4,17 @@ html
   include transition.pug
   head
     include lib.pug
+    <|post.css|>
+    <|magicmouse.css|>
     body(class="bg-dark")
-      nav.navbar.navbar-expand-lg.navbar-dark.bg-transparent
-        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.mr-auto
-            li.nav-item.active.magic-hover.magic-hover__square
-              a.nav-link(href='#') Blog
-                span.sr-only (current)
-            li.nav-item.magic-hover.magic-hover__square
-              a.nav-link.fade_out(data-url="/") Home 
+      div#image
+      div.position-absolute#container
+        div#background(data-url=results.imageUrl)
+        h1.display-1.text-center.text-white.title #{results.title}
+        span.go-back.h1(onclick="location.href='/blog'") &#x21A2;
+        .container
+          br 
+          br
+          .content !{results.html}
     <|mouse.js|>
+    <|post.js|>
