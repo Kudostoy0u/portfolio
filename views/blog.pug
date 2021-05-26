@@ -17,19 +17,20 @@ html
       br
       br
       .position-absolute.overflow-scroll.h-75
-        .float-left.h-50.bg-transparent.ml-4.position-relative.cs-width
-          each val in results
-            a.fade_out(data-url="/posts/"+val.title) 
-              .border.float-right.magic-hover.magic-hover__square
-                img.zoomin(src=val.imageUrl)
-            .text.ml-3
-              a.underline.cardTitle.fade_out(data-url="/posts/"+val.title)  #{val.title}
-              p.text-secondary #{val.description}...&nbsp;&nbsp;
-                a.underline.fade_out(data-url="/posts/"+val.title)  More
-            div.h-15
-          br
-          br
-      i.arrow.ml-3
+        div#mobile
+          .float-left.h-50.bg-transparent.ml-4.position-relative.cs-width
+            each val in results
+              a.fade_out(data-url="/posts/"+val.title) 
+                .border.float-right.magic-hover.magic-hover__square
+                  img.zoomin(src=val.imageUrl)
+              .text.ml-3
+                a.underline.cardTitle.fade_out(data-url="/posts/"+val.title)  #{val.title}
+                p.text-secondary #{val.description}...&nbsp;&nbsp;
+                  a.underline.fade_out(data-url="/posts/"+val.title)  More
+              div.h-15
+            br
+            br
+        i.arrow.ml-3
     <|mouse.js|>
     script(src="//cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js")
     <|halo.js|>

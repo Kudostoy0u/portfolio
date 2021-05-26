@@ -64,7 +64,7 @@ nav div * {
 
 .content__container {
 	overflow: hidden;
-	height: 70px
+	height: 11vh;
 }
 
 .content__container__list {
@@ -81,5 +81,19 @@ nav div * {
 }
 .icons {
   margin-top:9vh;
-	font-size: 5vmax
+  font-size: 5vmax;
+}
+@media (max-width: 800px) {
+  .icons {
+    margin-top:12vh;
+    font-size:8vmax;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  .content__container {
+	overflow: hidden;
+	height: 9vh;
+  }
 }

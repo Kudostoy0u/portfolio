@@ -89,6 +89,18 @@ nav div {
 .display-inline-block {
   display: inline-block;
 }
+.display-block {
+  display:block;
+}
+.margin-auto {
+  margin: 0 auto;
+}
 .h1 {
   font-size:32px;
+}
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    justify-content: center;
+  }
 }

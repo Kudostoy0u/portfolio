@@ -52,9 +52,10 @@ else if (path == "/blog")
     .forEach(w => {w.addEventListener("click", () => {
         let e = document.getElementById("transition")
         let t = 0
+        const limit = window.innerWidth < 500 ? 110 : 100
         e.style.display = "block"
           const close = () => {
-              if (t >= 100) {
+              if (t > limit) {
                 location.href=w.dataset.url
               } else {
               t+=2
