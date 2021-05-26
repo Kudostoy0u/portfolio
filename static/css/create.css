@@ -7,3 +7,6 @@
   border-color:#ced4DA !important;
   box-shadow: none !important;
 }
+body {
+  overflow:hidden;
+}
