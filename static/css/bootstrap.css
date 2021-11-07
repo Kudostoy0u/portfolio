@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
+.complement {
+  color: #a22d63;
+}
 .text-center {
   text-align:center;
 }

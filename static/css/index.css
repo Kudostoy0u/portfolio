@@ -64,7 +64,7 @@ nav div * {
 
 .content__container {
 	overflow: hidden;
-	height: 11vh;
+	height: 10.2vh;
 }
 
 .content__container__list {
@@ -76,7 +76,7 @@ nav div * {
 }
 
 .content__container__list__item {
-	line-height: 70px;
+	line-height: 10vh;
 	margin: 0
 }
 .icons {

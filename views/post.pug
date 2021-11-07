@@ -1,23 +1,24 @@
 //Oh hi, didn't expect you here. Visit https://github.com/Kudostoy0u/portfolio if you want to see the source code
 doctype html
-html
+html(lang="en")
   head
+    title #{results.title}
     include lib.pug
-    include transition.pug
     <|toast.css|>
-    <|post.css|>
-    body
-      div#image
-      div.position-absolute#container
-        div#background(data-url=results.imageUrl)
- 
-        h1.display-1.text-center.text-white.title #{results.title}
-        h2.text-center.text-secondary #{results.date}
-        span.go-back.h1(onclick="location.href='/blog'") &#x21A2;
-        br 
-        br
-        .container(align="center")
-          .tui-editor-contents
-            .content !{results.html}
+    <|post.min.css|>
+  body
+    include transition.pug
+    div#image
+    div.position-absolute#container
+      div#background(data-url=results.imageUrl)
+
+      h1.display-1.text-center.text-white.title #{results.title}
+      h2.text-secondary#date #{results.date}
+      span.go-back.h1(onclick="location.href='/blog'",aria-label="Back") &#x21A2;
+      br 
+      br
+      .container
+        .tui-editor-contents
+          .content !{results.html}
     <|mouse.js|>
-    <|post.js|>
+    <|post.min.js|>

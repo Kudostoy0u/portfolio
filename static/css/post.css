@@ -2,6 +2,9 @@
 .container > h1,h2,h3,h4,a,p,li,ul,code {
   font-family:'Roboto Mono';
 }
+html,body,.container {
+  overflow-x: hidden;
+}
 h1 {
   font-size:40px !important;
   line-height:1 !important;
@@ -11,9 +14,6 @@ p {
 }
 li {
   font-size:15px;
-}
-html {
-  overflow-x:hidden;
 }
 * {
   cursor: none;
@@ -42,13 +42,8 @@ code {
     filter: blur(5px) brightness(70%);
     background-attachment: fixed;
 }
-#container {
-  width:100vw;
-  height:100vh;
-  position:absolute;
-}
 .title {
-  font-size:130px !important;
+  font-size:10vw !important;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -71,19 +66,25 @@ code {
   left:1vw;
 }
 .container {
-  min-width:100vh;
+  min-width:100vw;
   background:white;
-  margin: 0 auto;
   position:relative;
   margin-top:100vh;
   color:black;
+  display: flex;
+  justify-content: center;
 }
 .content {
-  width:80%;
+  max-width:80vw;
   margin-top:5vh;
   text-align:justify;
   padding-bottom:5vh;
 }
 #magicPointer {
   background: black !important;
+}
+
+#date {
+text-align:center;
+width:100vw;
 }

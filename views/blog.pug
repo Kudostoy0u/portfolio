@@ -1,37 +1,38 @@
 //Oh hi, didn't expect you here. Visit https://github.com/Kudostoy0u/portfolio if you want to see the source code
 doctype html
-html
-  include transition.pug
+html(lang="en")
   head
+    title Kudos | Blog
     include lib.pug
-    <|blog.css|>
-    body(class="bg-dark")
-      nav
-        div.active.magic-hover.magic-hover__square
-          a.nav-link.text-gray(href='#') Blog
-        div.magic-hover.magic-hover__square
-          a.nav-link.fade_out(data-url="/") Home
-      br
-      h1.text-white.display-5.ml-6.float-left.display-inline-block#name K
-        span#onhover udos Beluga
-      br
-      br
-      .position-absolute.overflow-scroll.h-75
-        div#mobile
-          .float-left.h-50.bg-transparent.ml-4.position-relative.cs-width
-            each val in results
-              a.fade_out(data-url="/posts/"+val.title) 
-                .border.float-right.magic-hover.magic-hover__square
-                  img.zoomin(src=val.imageUrl)
-              .text.ml-3
-                a.underline.cardTitle.fade_out(data-url="/posts/"+val.title)  #{val.title}
-                p.text-secondary #{val.description}...&nbsp;&nbsp;
-                  a.underline.fade_out(data-url="/posts/"+val.title)  More
-              div.h-15
-            br
-            br
-        i.arrow.ml-3
+    <|blog.min.css|>
+  body(class="bg-dark")
+    include transition.pug
+    nav
+      div.active.magic-hover.magic-hover__square
+        a.nav-link.complement(href='#') Blog
+      div.magic-hover.magic-hover__square
+        a.nav-link.fade_out(data-url="/") Home
+    br
+    h1.text-white.display-5.ml-6.float-left.display-inline-block#name K
+      span#onhover udos Beluga
+    br
+    br
+    .position-absolute.overflow-scroll.h-75#blogs
+      div#mobile
+        .float-left.h-50.bg-transparent.ml-4.position-relative.cs-width
+          each val in results
+            a.fade_out(data-url="/posts/"+val.title) 
+              .border.float-right.magic-hover.magic-hover__square.display-inline-block
+                img.zoomin(src=val.imageUrl,style="width:100%;height:100%", alt="")
+            .text.ml-3
+              a.underline.cardTitle.fade_out(data-url="/posts/"+val.title)  #{val.title}
+              p.text-secondary #{val.description}...&nbsp;&nbsp;
+                a.underline.fade_out(data-url="/posts/"+val.title)  More
+            div.h-15
+          br
+          br
+      i.arrow.ml-3
     <|mouse.js|>
     script(src="//cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js")
     <|halo.js|>
-    <|blog.js|>
+    <|blog.min.js|>

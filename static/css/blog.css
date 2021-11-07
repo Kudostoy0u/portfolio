@@ -57,7 +57,7 @@ a.underline {
 .border {
   width:50%;
   display: block;
-  height:30vh;
+  height:25vh;
   overflow:hidden;
 }
 
@@ -87,9 +87,6 @@ a.underline {
 .h-15 {
   height:15vh;
 }
-.cardTitle {
-  font-size:30px;
-}
 div .fade_out:hover {
   color:rgb(26, 107, 187);
 }
@@ -107,3 +104,9 @@ div .fade_out:hover {
     text-align:center;
   }
 }
+#blogs::-webkit-scrollbar {
+  display: none;
+}
+  .cardTitle {
+    font-size:30px;
+  }

@@ -23,6 +23,7 @@ merge = file => {
         })
         return [client, client.db("Portfolio").collection("Posts")]
     }
+    console.log(uri)
 app.use(express.static('public'))
 // Main
 app.get('/', (_, res) => res.send(pug.renderFile('views/index.pug').replace(/<\|.+?\|>/g, x => merge(x))))
