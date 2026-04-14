@@ -58,65 +58,24 @@
 }
 
 .more-projects {
-  position: relative;
-  display: inline-grid;
+  display: inline-flex;
   align-items: center;
   min-height: 1.5em;
-  vertical-align: baseline;
-  width: 4ch;
-  overflow: hidden;
-  transition: width 520ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.more-projects.is-open {
-  width: min(30rem, calc(100vw - 4rem));
-}
-
-.more-trigger-mask {
-  grid-area: 1 / 1;
-  width: 4ch;
-  overflow: hidden;
 }
 
 .more-trigger {
-  display: inline-block;
   padding: 0;
   border-inline: 0;
   border-top: 0;
   background: transparent;
   font: inherit;
   cursor: pointer;
-  white-space: nowrap;
-  transform: translateX(0);
-  opacity: 1;
-  transition:
-    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 260ms ease;
-}
-
-.more-projects.is-open .more-trigger {
-  transform: translateX(-100%);
-  opacity: 0;
 }
 
 .more-list {
-  grid-area: 1 / 1;
   display: inline-flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  padding-left: 0.35rem;
-  opacity: 0;
-  transform: translateX(1.4rem);
-  pointer-events: none;
-  transition:
-    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 320ms ease 90ms;
-}
-
-.more-projects.is-open .more-list {
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
 }
 
 .footer {
@@ -137,10 +96,6 @@
   .hero {
     align-content: start;
     padding-top: 9vh;
-  }
-
-  .more-projects.is-open {
-    width: min(24rem, calc(100vw - 3rem));
   }
 
   .footer {
