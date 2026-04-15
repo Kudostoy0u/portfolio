@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
+const isMinimalism = __MINIMALISM__;
 const headingText = "Hi, I'm Kundan.";
 const headingChunks = [
   { text: "Hi", delay: 120 },
@@ -119,19 +120,21 @@ function App() {
           {typedHeading}
         </h1>
         <div className="intro-copy">
-          <p className="intro-line">
-            I enjoy turning complex data into usable tools.
-          </p>
+          {!isMinimalism && (
+            <p className="intro-line">
+              I enjoy turning complex data into usable tools.
+            </p>
+          )}
           <p className="lede">
             I&apos;m currently building{" "}
             <a
               href="https://www.haku.cards"
               target="_blank"
               rel="noreferrer"
-              onMouseEnter={() => setActiveInlineProject("Haku")}
-              onMouseLeave={() => setActiveInlineProject(null)}
-              onFocus={() => setActiveInlineProject("Haku")}
-              onBlur={() => setActiveInlineProject(null)}
+              onMouseEnter={() => !isMinimalism && setActiveInlineProject("Haku")}
+              onMouseLeave={() => !isMinimalism && setActiveInlineProject(null)}
+              onFocus={() => !isMinimalism && setActiveInlineProject("Haku")}
+              onBlur={() => !isMinimalism && setActiveInlineProject(null)}
             >
               Haku
             </a>
@@ -140,10 +143,12 @@ function App() {
               href="https://www.scio.ly"
               target="_blank"
               rel="noreferrer"
-              onMouseEnter={() => setActiveInlineProject("Scio.ly")}
-              onMouseLeave={() => setActiveInlineProject(null)}
-              onFocus={() => setActiveInlineProject("Scio.ly")}
-              onBlur={() => setActiveInlineProject(null)}
+              onMouseEnter={() =>
+                !isMinimalism && setActiveInlineProject("Scio.ly")
+              }
+              onMouseLeave={() => !isMinimalism && setActiveInlineProject(null)}
+              onFocus={() => !isMinimalism && setActiveInlineProject("Scio.ly")}
+              onBlur={() => !isMinimalism && setActiveInlineProject(null)}
             >
               Scio.ly
             </a>
@@ -182,8 +187,8 @@ function App() {
                   <a
                     key={project.label}
                     href={project.href}
-                    onMouseEnter={() => setActiveProject(project)}
-                    onFocus={() => setActiveProject(project)}
+                    onMouseEnter={() => !isMinimalism && setActiveProject(project)}
+                    onFocus={() => !isMinimalism && setActiveProject(project)}
                     target={
                       project.href.startsWith("http") ? "_blank" : undefined
                     }
@@ -195,7 +200,7 @@ function App() {
                     {project.label}
                   </a>
                 ))}
-                {activeProject && (
+                {!isMinimalism && activeProject && (
                   <div
                     key={activeProject.label}
                     className="more-detail"
@@ -209,7 +214,7 @@ function App() {
             </span>
             .
           </p>
-          {activeInlineProject && (
+          {!isMinimalism && activeInlineProject && (
             <div
               key={activeInlineProject}
               className="inline-project-detail"
